@@ -1,8 +1,5 @@
 FROM ollama/ollama
-
+COPY Modelfile .
 RUN ollama serve & \
-    sleep 5 && \
-    ollama pull gemma3:4b && \
-    pkill ollama
-
-CMD ["ollama", "serve"]
+    sleep 10 && \
+    ollama create mymodel -f Modelfile
