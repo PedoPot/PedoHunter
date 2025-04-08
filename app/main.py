@@ -3,7 +3,7 @@ from ollama import Client
 from schemas import Message, ConversationRequest
 
 app = FastAPI()
-model: str = "gemma3:4b"
+model: str = "minor-chatter"
 
     
 @app.post("/chat")

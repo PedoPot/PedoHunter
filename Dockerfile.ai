@@ -2,4 +2,4 @@ FROM ollama/ollama
 COPY Modelfile .
 RUN ollama serve & \
     sleep 10 && \
-    ollama create mymodel -f Modelfile
+    ollama create minor-chatter -f Modelfile
